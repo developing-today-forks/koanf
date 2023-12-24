@@ -383,8 +383,6 @@ func TestLoadFileAllKeys(t *testing.T) {
 		// Replace the "type" fields that varies across different files
 		// to do a complete key -> value map match with testAll.
 		s := strings.TrimSpace(re.ReplaceAllString(c.koanf.Sprint(), ""))
-		// if contains(emptyIsNilCases, c.typeName) {
-		// if strings.Contains(c.typeName, "kdl") {
 
 		if arrayContains(emptyIsNilCases, c.typeName) {
 			s = strings.Replace(s, "empty -> <nil>", "empty -> map[]", -1)
